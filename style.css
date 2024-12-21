@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+:root {
+  --color-primary-white-100: hsl(0, 0%, 100%);
+  --color-primary-slate-300: hsl(212, 45%, 89%);
+  --color-primary-slate-500: hsl(216, 15%, 48%);
+  --color-primary-slate-900: hsl(218, 44%, 22%);
+  --ff-primary: "Outfit", serif;
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+/* css reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+html,
+body {
+  height: 100%;
+  line-height: 1.4;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.2;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  background-color: var(--color-primary-slate-300);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-regular);
+  font-size: 0.9375rem;
+  text-align: center;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  background-color: var(--color-primary-white-100);
+  max-width: 320px;
+  border-radius: 1.25rem;
+}
+
+.wrapper {
+  padding: 1rem;
+}
+
+.image {
+  border-radius: 0.625rem;
+}
+
+.card-text {
+  display: grid;
+  gap: 1rem;
+  margin-block: 1.5rem 2.5rem;
+  padding-inline: 1rem;
+}
+
+h1 {
+  font-size: 1.375rem;
+  font-weight: var(--fw-bold);
+  padding-bottom: clamp(0rem, -0.4621rem + 1.9718vw, 1.3125rem);
+}
+
+a:hover {
+  cursor: pointer;
+}
